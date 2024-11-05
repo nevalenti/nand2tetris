@@ -1,0 +1,8 @@
+CHIP DFF {
+    IN  in;
+    OUT out;
+
+    PARTS:
+      BUILTIN DFF;
+      CLOCKED in;
+}
