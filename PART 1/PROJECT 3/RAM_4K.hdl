@@ -16,24 +16,24 @@ CHIP RAM4K {
         h=dmux8wayOut8
       );
 
-      RAM512(in=in, load=dmux8wayOut1, address=address[0..8], out=registerOut1);
-      RAM512(in=in, load=dmux8wayOut2, address=address[0..8], out=registerOut2);
-      RAM512(in=in, load=dmux8wayOut3, address=address[0..8], out=registerOut3);
-      RAM512(in=in, load=dmux8wayOut4, address=address[0..8], out=registerOut4);
-      RAM512(in=in, load=dmux8wayOut5, address=address[0..8], out=registerOut5);
-      RAM512(in=in, load=dmux8wayOut6, address=address[0..8], out=registerOut6);
-      RAM512(in=in, load=dmux8wayOut7, address=address[0..8], out=registerOut7);
-      RAM512(in=in, load=dmux8wayOut8, address=address[0..8], out=registerOut8);
+      RAM512(in=in, load=dmux8wayOut1, address=address[0..8], out=ramOut1);
+      RAM512(in=in, load=dmux8wayOut2, address=address[0..8], out=ramOut2);
+      RAM512(in=in, load=dmux8wayOut3, address=address[0..8], out=ramOut3);
+      RAM512(in=in, load=dmux8wayOut4, address=address[0..8], out=ramOut4);
+      RAM512(in=in, load=dmux8wayOut5, address=address[0..8], out=ramOut5);
+      RAM512(in=in, load=dmux8wayOut6, address=address[0..8], out=ramOut6);
+      RAM512(in=in, load=dmux8wayOut7, address=address[0..8], out=ramOut7);
+      RAM512(in=in, load=dmux8wayOut8, address=address[0..8], out=ramOut8);
 
       Mux8Way16(
-        a=registerOut1,
-        b=registerOut2,
-        c=registerOut3,
-        d=registerOut4,
-        e=registerOut5,
-        f=registerOut6,
-        g=registerOut7,
-        h=registerOut8,
+        a=ramOut1,
+        b=ramOut2,
+        c=ramOut3,
+        d=ramOut4,
+        e=ramOut5,
+        f=ramOut6,
+        g=ramOut7,
+        h=ramOut8,
         sel=address[9..11],
         out=out
       );
