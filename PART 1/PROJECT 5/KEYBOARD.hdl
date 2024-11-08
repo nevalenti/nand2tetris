@@ -1,0 +1,6 @@
+CHIP Keyboard {
+    OUT out[16];
+
+    PARTS:
+      BUILTIN Keyboard;
+}
