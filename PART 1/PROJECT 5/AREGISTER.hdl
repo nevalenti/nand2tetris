@@ -1,0 +1,8 @@
+CHIP ARegister {
+    IN  in[16], load;
+    OUT out[16];
+
+    PARTS:
+      BUILTIN ARegister;
+      CLOCKED in, load;
+}
